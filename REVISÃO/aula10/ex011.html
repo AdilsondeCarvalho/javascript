@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é a sua nacionalidade</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h2>De qual páis você é?</h2>
+        <input type="text" id="pais" placeholder="Digite o nome do país:">
+        <button onclick="verificar()">Verificar</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+    function verificar() {
+        var pais = document.getElementById('pais').value.trim()
+        var resultado = document.getElementById('resultado')
+
+        if (pais.toLowerCase() == 'brasil') {
+            resultado.textContent = `Vivendo em ${pais}. Você é brasileiro(a)!`
+        } else if (pais === '') {
+            resultado.textContent = 'Digite o nome do país.'
+        } else {
+            resultado.textContent = `Vivendo em ${pais}. Você é estrangeiro(a)`
+        }
+    }
+    </script>
+
+
+    
+</body>
+</html>
