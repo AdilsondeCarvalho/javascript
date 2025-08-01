@@ -21,6 +21,10 @@ div {
     text-align: center;
     padding: 8px;
 }
+a {
+    color: white;
+    text-decoration: none;
+}
 
 footer {
     color: white;

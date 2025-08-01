@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Verificando a idade</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificando a idade</h1>
     </header>
+
     <section>
         <div>
-            testeando
-        </div>
-        <div>
+            <p>Ano de nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            
+            <p>Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
 
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="res">
+            Preenche os dados acima, para visualizar o resultado. 
         </div>
 
     </section>
+
     <footer>
-        <p>&copy; Adilson Carvalho</p>
+        <p>&copy; 2025 - Petabyte - Criação de sites profissionais.</p>
     </footer>
     <script src="script.js"></script>
-    
 </body>
 </html>
