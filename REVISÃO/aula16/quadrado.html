@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Animação de Texto Recursiva</title>
+  <style>
+    #frase {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="frase">Petabyte Site</div>
+
+  <script>
+    function moverTexto(elemento, posicao) {
+      if (posicao > 400) return; // caso base: para a animação
+      elemento.style.left = posicao + "px";
+
+      // recursão com atraso de 20ms
+      setTimeout(() => moverTexto(elemento, posicao + 5), 20);
+    }
+
+    let frase = document.getElementById("frase");
+    moverTexto(frase, 0); // começa a animação
+  </script>
+</body>
+</html>
